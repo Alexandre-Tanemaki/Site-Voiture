@@ -19,3 +19,4 @@ cards.forEach(card => {
     image.style.transform = 'scale(1)';
   });
 });
+

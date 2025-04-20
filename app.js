@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 
+
 let cars = [];
 
 fs.readFile('./data/cars.json', 'utf8', (err, data) => {

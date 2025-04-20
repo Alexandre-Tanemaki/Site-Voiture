@@ -1,0 +1,38 @@
+body {
+  background-color: #f8f9fa; /* Couleur de fond douce */
+}
+
+.about-section {
+  background-color: #ffffff; /* Fond blanc */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #343a40; /* Couleur du titre */
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  color: #6c757d; /* Couleur du texte */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Coins arrondis pour l'image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  font-size: 1rem;
+  color: #495057;
+  margin-bottom: 10px;
+}

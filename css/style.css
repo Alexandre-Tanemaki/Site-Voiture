@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -31,6 +32,8 @@ h1, h2 {
   overflow: hidden; /* Coupe les parties débordantes de l'image */
   border-radius: 10px; /* Coins arrondis pour un design plus moderne */
   background-color: #f8f9fa; /* Couleur de fond pour éviter les espaces vides */
+  width: 18rem; /* Taille uniforme pour toutes les cartes */
+  margin: 0 auto; /* Centrer les cartes */
 }
 
 /* Images des cartes */
@@ -270,7 +273,10 @@ blockquote {
   font-size: 0.9rem;
   color: #777;
 }
-
+footer a:hover i {
+  color: #f39c12;
+  transition: 0.3s;
+}
 /* Section Galerie */
 .container img {
   max-width: 100%;
