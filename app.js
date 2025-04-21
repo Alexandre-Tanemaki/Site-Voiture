@@ -36,6 +36,9 @@ app.get('/about', (req, res) => {
     res.render('partials/contact');
   });
   
+app.get('/google775d111e9c3f0375.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'google775d111e9c3f0375.html'));
+});
   
 const PORT = 3000;
 app.listen(PORT, '0.0.0.0', () => {
