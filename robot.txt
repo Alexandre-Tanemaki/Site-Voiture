@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://auto-show.render.com/sitemap.xml
