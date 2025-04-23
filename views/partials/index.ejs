@@ -21,13 +21,8 @@
       <% cars.forEach(car => { %>
         <div class="col-md-4">
           <div class="card mb-4">
-            <div class="card-img-container">
-              <img src="/images/<%= car.image %>" class="card-img-top" alt="<%= car.name %>">
-              <div class="card-overlay">
-                <p class="overlay-text">Voir détails</p>
-              </div>
-            </div>
-            <div class="card-body">
+            <img src="/images/<%= car.image %>" class="card-img-top img-fluid" alt="<%= car.name %>" style="height: 200px; object-fit: cover;">
+            <div class="card-body text-center">
               <h3 class="card-title"><%= car.name %></h3>
               <p class="card-text"><strong><%= car.price %></strong></p>
               <a href="/car/<%= car.id %>" class="btn btn-primary">Voir détails</a>
