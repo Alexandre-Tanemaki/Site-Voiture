@@ -20,17 +20,25 @@
 <meta name="google-site-verification" content="Cd0WObPY3v3hWywSo48BqvgYXws32gw0PaEQtDN5slM" />
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="/">AutoShow</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="/about">À propos</a></li>
-          <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-        </ul>
-      </div>
+  <div class="container">
+    <a class="navbar-brand" href="/">AutoShow</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cart">
+            <i class="fas fa-shopping-cart"></i> Panier
+            <% if (cart && cart.length > 0) { %>
+              <span class="badge bg-danger"><%= cart.length %></span>
+            <% } %>
+          </a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
   
     <script>
       let canvas = document.getElementById("myCanvas");

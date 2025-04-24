@@ -15,6 +15,11 @@ fs.readFile('./data/cars.json', 'utf8', (err, data) => {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+// Middleware pour rendre `cart` accessible dans toutes les vues
+app.use((req, res, next) => {
+  res.locals.cart = cart; // Rendre le panier accessible dans toutes les vues
+  next();
+});
 
 // Configuration
 app.set('view engine', 'ejs');
@@ -92,7 +97,7 @@ app.post('/cart/add', (req, res) => {
 
 // Afficher le panier
 app.get('/cart', (req, res) => {
-  res.render('cart', { cart });
+  res.render('partials/cart', { cart });
 });
 
 // Supprimer un véhicule du panier
