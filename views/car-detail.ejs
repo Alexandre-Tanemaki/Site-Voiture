@@ -32,15 +32,27 @@
 
   <!-- Contenu principal -->
   <div class="container mt-5">
-    <h1 class="text-center mb-4"><%= car.name %></h1>
     <div class="row">
       <div class="col-md-6">
-        <img src="/images/<%= car.image %>" alt="<%= car.name %>" class="car-detail-image img-fluid">
+        <img src="/images/<%= car.image %>" class="img-fluid rounded" alt="<%= car.name %>">
       </div>
       <div class="col-md-6">
-        <h3>Prix : <%= car.price %></h3>
-        <p><%= car.description %></p>
-        <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+        <h1><%= car.name %></h1>
+        <p><strong>Prix :</strong> <%= car.price %></p>
+        <h3>Caractéristiques :</h3>
+        <ul>
+          <% if (car.features && car.features.length > 0) { %>
+            <% car.features.forEach(feature => { %>
+              <li><%= feature %></li>
+            <% }); %>
+          <% } else { %>
+            <li>Aucune caractéristique disponible.</li>
+          <% } %>
+        </ul>
+        <form action="/cart/add" method="POST">
+          <input type="hidden" name="carId" value="<%= car.id %>">
+          <button type="submit" class="btn btn-primary">Ajouter au panier</button>
+        </form>
       </div>
     </div>
   </div>

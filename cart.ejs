@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <h1>Votre panier</h1>
+  <% if (cart.length > 0) { %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Nom</th>
+          <th>Prix</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% cart.forEach(car => { %>
+          <tr>
+            <td><img src="/images/<%= car.image %>" alt="<%= car.name %>" style="width: 100px;"></td>
+            <td><%= car.name %></td>
+            <td><%= car.price %></td>
+            <td>
+              <form action="/cart/remove" method="POST">
+                <input type="hidden" name="carId" value="<%= car.id %>">
+                <button type="submit" class="btn btn-danger">Supprimer</button>
+              </form>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <a href="/checkout" class="btn btn-success">Passer à la commande</a>
+  <% } else { %>
+    <p>Votre panier est vide.</p>
+  <% } %>
+</div>

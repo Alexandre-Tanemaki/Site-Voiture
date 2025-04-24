@@ -5,6 +5,7 @@ const fs = require('fs');
 
 
 let cars = [];
+let cart = [];
 
 fs.readFile('./data/cars.json', 'utf8', (err, data) => {
   if (err) throw err;
@@ -75,5 +76,41 @@ app.get('/car/:id', (req, res) => {
       <a href="/">Retour à l'accueil</a>
     `);
   });
+
+// Ajouter un véhicule au panier
+app.post('/cart/add', (req, res) => {
+  const carId = parseInt(req.body.carId);
+  const car = cars.find(c => c.id === carId);
+
+  if (car) {
+    cart.push(car);
+    res.redirect('/cart');
+  } else {
+    res.status(404).send('Voiture non trouvée');
+  }
+});
+
+// Afficher le panier
+app.get('/cart', (req, res) => {
+  res.render('cart', { cart });
+});
+
+// Supprimer un véhicule du panier
+app.post('/cart/remove', (req, res) => {
+  const carId = parseInt(req.body.carId);
+  cart = cart.filter(c => c.id !== carId);
+  res.redirect('/cart');
+});
+
+app.get('/checkout', (req, res) => {
+  res.render('checkout', { cart });
+});
+
+app.post('/checkout', (req, res) => {
+  // Simuler une commande
+  console.log('Commande passée :', cart);
+  cart = []; // Vider le panier après la commande
+  res.send('<h1>Merci pour votre commande !</h1><a href="/">Retour à l\'accueil</a>');
+});
 
 

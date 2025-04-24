@@ -3,17 +3,25 @@
     "id": 1,
     "name": "Mercedes AMG",
     "price": "120.000.000 XAF",
-    "description": "Une voiture de luxe avec des performances exceptionnelles.",
-    "image": "Mercedes-ClasseG.png"
+        "image": "Mercedes-ClasseG.png",
+    "features": ["Puissance : 500 ch", "Transmission : Automatique", "Couleur : Noir"]
   },
   {
     "id": 2,
     "name": "Tesla Model 3",
-    "price": "100.000.000 XAF",
-    "description": "Une voiture électrique innovante et performante.",
-    "image": "Telsa.png"
+    "price": "75.000.000 XAF",
+    "image": "Telsa.png",
+    "features": []
   },
-  { "id": 3, "name": "Chevrolet-Camaro", "price": "75.000.000 XAF", "image": "Chevrolet-Camaro.png" },
+  {
+    "id": 3,
+    "name": "Chevrolet-Camaro",
+    "price": "75.000.000 XAF",
+    "image": "Chevrolet-Camaro.png",
+    "features": []
+  },
+  
+  
   { "id": 4, "name": "Mercedes-Benz", "price": "120.000.000 XAF", "image": "Mercedes-Benz.png" },
   { "id": 5, "name": "Mercedes-Brabus", "price": "200.000.000 XAF", "image": "Mercedes-Brabus.png" },
   { "id": 6, "name": "Tesla", "price": "100.000.000 XAF", "image": "Telsa.png" }

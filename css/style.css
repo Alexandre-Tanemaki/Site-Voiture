@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -38,11 +37,10 @@ h1, h2 {
 
 /* Images des cartes */
 .card-img-top {
-  width: 100%; /* S'adapte à la largeur du conteneur */
-  height: 100%; /* S'adapte à la hauteur du conteneur */
-  object-fit: cover; /* Remplit le conteneur tout en conservant les proportions */
-  display: block; /* Évite les espaces blancs autour des images */
-  transition: transform 0.3s ease;
+  height: auto; /* Conserve les proportions */
+  max-height: 200px; /* Limite la hauteur maximale */
+  object-fit: contain; /* Affiche l'image entière sans la couper */
+  background-color: #f8f9fa; /* Ajoute un fond clair pour les images avec des bords transparents */
 }
 
 /* Zoom sur l'image au survol */

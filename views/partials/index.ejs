@@ -21,7 +21,7 @@
       <% cars.forEach(car => { %>
         <div class="col-md-4">
           <div class="card mb-4">
-            <img src="/images/<%= car.image %>" class="card-img-top img-fluid" alt="<%= car.name %>" style="height: 200px; object-fit: cover;">
+            <img src="/images/<%= car.image %>" class="card-img-top img-fluid" alt="<%= car.name %>" style="height: auto; max-height: 200px; object-fit: contain;">
             <div class="card-body text-center">
               <h3 class="card-title"><%= car.name %></h3>
               <p class="card-text"><strong><%= car.price %></strong></p>
